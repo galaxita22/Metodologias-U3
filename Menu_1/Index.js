@@ -42,22 +42,22 @@ function create(){
     this.graphics.fillRoundedRect(screenAncho/2.3, screenAlto/2.1, 115, 50, 10);
 
 
-    let botonTortuga = this.add.zone(screenAncho/2.3, screenAlto/2.1, 115, 50, 10).setOrigin(0,0).setInteractive();
+    let Jugar = this.add.zone(screenAncho/2.3, screenAlto/2.1, 115, 50, 10).setOrigin(0,0).setInteractive();
 
     
-    botonTortuga.on('pointerover', ()=> {
+    Jugar.on('pointerover', ()=> {
         this.graphics.fillStyle(0x049c8d, 1); 
         this.graphics.fillRoundedRect(screenAncho/2.3, screenAlto/2.1, 115, 50, 10);
         canvas.style.cursor = 'pointer';
     });
 
-    botonTortuga.on('pointerout', ()=> {
+    Jugar.on('pointerout', ()=> {
         this.graphics.fillStyle(0x000000, 1); 
         this.graphics.fillRoundedRect(screenAncho/2.3, screenAlto/2.1, 115, 50, 10);
         canvas.style.cursor = 'default';
     });
 
-    botonTortuga.on('pointerdown', ()=> {
+    Jugar.on('pointerdown', ()=> {
         console.log('cambio de pagina');
         window.location.href = "/Dificultad/dificultad.html";
     });
