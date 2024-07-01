@@ -31,7 +31,12 @@
                 const value = Math.random() < 0.5 ? 0 : 1;
                 cell.dataset.value = value; // Guardar el valor en un atributo de datos
                 cell.addEventListener("click", function() {
-                    this.textContent = this.dataset.value; // Mostrar el valor al hacer clic
+                    if (this.dataset.value === '0') {
+                        this.textContent = this.dataset.value;
+                        alert("¡CUARENTENA!");
+                    } else {
+                        this.textContent = this.dataset.value; // Mostrar el valor al hacer clic
+                    }
                 });
             }
         }
