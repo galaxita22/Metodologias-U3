@@ -33,7 +33,12 @@
                 cell.addEventListener("click", function() {
                     if (this.dataset.value === '0') {
                         this.textContent = this.dataset.value;
-                        alert("¡CUARENTENA!");
+                        if (confirm("CUARENTENA!\n¿Desea volver a intentarlo?")){
+                            location.reload();
+                        }
+                        else {
+                            window.location.href = "/Dificultad.html";
+                        }
                     } else {
                         this.textContent = this.dataset.value; // Mostrar el valor al hacer clic
                     }
