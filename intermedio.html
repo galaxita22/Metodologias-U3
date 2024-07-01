@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz 16x16</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 30px; /* Ancho de cada celda */
+            height: 30px; /* Alto de cada celda */
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<table border="1" id="matrixTable"></table>
+
+<script>
+    // Función para crear la matriz de 9x9 con valores de 0 y 1
+    function generateMatrix() {
+        const table = document.getElementById("matrixTable");
+        for (let i = 0; i < 16; i++) {
+            const row = table.insertRow();
+            for (let j = 0; j < 16; j++) {
+                const cell = row.insertCell();
+                const value = Math.random() < 0.5 ? 0 : 1;
+                cell.dataset.value = value; // Guardar el valor en un atributo de datos
+                cell.addEventListener("click", function() {
+                    if (this.dataset.value === '0') {
+                        this.textContent = this.dataset.value;
+                        alert("¡CUARENTENA!");
+                    } else {
+                        this.textContent = this.dataset.value; // Mostrar el valor al hacer clic
+                    }
+                });
+            }
+        }
+    }
+
+    // Llamar a la función para generar la matriz cuando se carga la página
+    window.onload = generateMatrix;
+</script>
+</body>
+</html>
