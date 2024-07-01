@@ -58,7 +58,7 @@ function create(){
 
     facil.on('pointerdown', ()=> {
         console.log('cambio de pagina');
-        window.location.href = "";
+        window.location.href = "/Principiante.html";
     });
 
     //Media
@@ -88,11 +88,11 @@ function create(){
 
     media.on('pointerdown', ()=> {
         console.log('cambio de pagina');
-        window.location.href = "";
+        window.location.href = "/intermedio.html";
     });
 
     //dificil
-    this.add.text(screenAncho/1.88 +30, screenAlto/2.1+15, "Media", {
+    this.add.text(screenAncho/1.88 +20, screenAlto/2.1+15, "avanzado", {
         font: "bold 20px Arial",
         fill: "#ffffff"
     });
@@ -118,7 +118,7 @@ function create(){
 
     dificil.on('pointerdown', ()=> {
         console.log('cambio de pagina');
-        window.location.href = "";
+        window.location.href = "/avanzado.html";
     });
 
     
